@@ -34,7 +34,7 @@ Or include it directly in your codebase by adding the relevant files.
 
 1. **Include fxmath in your project**:
    ```cpp
-   #include "fxmath.h"
+   #include "fxmath.hpp"
    ```
 
 2. **Set up FloatX types**:
