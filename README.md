@@ -9,6 +9,22 @@
 - Designed for easy integration with existing projects requiring custom precision simulations.
 - Lightweight and easy to use.
 
+
+## Functions
+
+fxmath implements most of the functions in `math.h`/`<cmath>`:
+
+- **Basic Arithmetic**: `fabs`, `fmod`, `remainder`, `ceil`, `floor`, `round`
+- **Exponential and Logarithmic**: `exp`, `log`, `log10`, `log2`, `pow`
+- **Trigonometric**: `sin`, `cos`, `tan`, `asin`, `acos`, `atan`, `atan2`
+- **Hyperbolic**: `sinh`, `cosh`, `tanh`, `asinh`, `acosh`, `atanh`
+- **Special Functions**: `sqrt`, `cbrt`, `hypot`
+- **Error and Gamma Functions**: `erf`, `erfc`, `tgamma`, `lgamma`
+
+One can use these functions simply by adding the prefix "fx_" to the function names.
+All function instructions follows [math functions](https://en.cppreference.com/w/cpp/header/cmath) except the float numbers are replaced with floatx numbers. 
+
+
 ## Getting Started
 
 ### Prerequisites
@@ -71,20 +87,6 @@ int main() {
     return 0;
 }
 ```
-
-## Functions
-
-fxmath implements most of the functions in `math.h`/`<cmath>`:
-
-- **Basic Arithmetic**: `fabs`, `fmod`, `remainder`, `ceil`, `floor`, `round`
-- **Exponential and Logarithmic**: `exp`, `log`, `log10`, `log2`, `pow`
-- **Trigonometric**: `sin`, `cos`, `tan`, `asin`, `acos`, `atan`, `atan2`
-- **Hyperbolic**: `sinh`, `cosh`, `tanh`, `asinh`, `acosh`, `atanh`
-- **Special Functions**: `sqrt`, `cbrt`, `hypot`
-- **Error and Gamma Functions**: `erf`, `erfc`, `tgamma`, `lgamma`
-
-One can use these functions simply by adding the prefix "fx_" to the function names.
-All function instructions follows [math functions](https://en.cppreference.com/w/cpp/header/cmath) except the float numbers are replaced with floatx numbers. 
 
 ## Contributions
 
