@@ -1,6 +1,6 @@
 # fxmath
 
-**fxmath** is a C++ library for performing mathematical operations in simulated low-precision environments using [FloatX](https://github.com/oprecomp/FloatX). It replicates nearly all functionality of the C/C++ standard library's `math.h` or `<cmath>` headers, allowing users to conduct low-precision numerical experiments seamlessly. This makes it ideal for research and applications in numerical analysis, machine learning, and energy-efficient computing.
+**fxmath** is a header-only C++ library for performing mathematical operations in simulated low-precision environments using [FloatX](https://github.com/oprecomp/FloatX). It replicates nearly all functionality of the C/C++ standard library's `math.h` or `<cmath>` headers, allowing users to conduct low-precision numerical experiments seamlessly. This makes it ideal for research and applications in numerical analysis, machine learning, and energy-efficient computing.
 
 ## Features
 
