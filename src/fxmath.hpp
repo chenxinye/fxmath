@@ -118,14 +118,14 @@ template <class FLOAT> FLOAT fx_exp(const FLOAT &x){
 }
 
 
-template <class FLOAT> FLOAT fx_frexp(const FLOAT &x, int* exp){
+template <class FLOAT> FLOAT fx_frexp(const FLOAT &x, const int* exp){
     assert((ERROR_MESSAGE, !std::is_floating_point_v<FLOAT>));
     BACKEND_FLOAT val = frexp( (BACKEND_FLOAT) x, exp);
     return fx_rounding(&x, val);
 }
 
 
-template <class FLOAT> FLOAT fx_ldexp(const FLOAT &x, int exp){
+template <class FLOAT> FLOAT fx_ldexp(const FLOAT &x, const int exp){
     assert((ERROR_MESSAGE, !std::is_floating_point_v<FLOAT>));
     BACKEND_FLOAT val = ldexp( (BACKEND_FLOAT) x, exp);
     return fx_rounding(&x, val);
@@ -194,14 +194,14 @@ template <class FLOAT> FLOAT fx_logb(const FLOAT &x){
 }
 
 
-template <class FLOAT> FLOAT fx_scalbn(const FLOAT &x, int n){
+template <class FLOAT> FLOAT fx_scalbn(const FLOAT &x, const int n){
     assert((ERROR_MESSAGE, !std::is_floating_point_v<FLOAT>));
     BACKEND_FLOAT val = scalbn( (BACKEND_FLOAT) x, n);
     return fx_rounding(&x, val);
 }
 
 
-template <class FLOAT> FLOAT fx_scalbln(const FLOAT &x, long int n){
+template <class FLOAT> FLOAT fx_scalbln(const FLOAT &x, const long int n){
     assert((ERROR_MESSAGE, !std::is_floating_point_v<FLOAT>));
     BACKEND_FLOAT val = scalbln( (BACKEND_FLOAT) x, n);
     return fx_rounding(&x, val);
@@ -210,7 +210,7 @@ template <class FLOAT> FLOAT fx_scalbln(const FLOAT &x, long int n){
 
 // Power functions
 
-template <class FLOAT, class EXPTYPE> FLOAT fx_pow(const FLOAT &x, EXPTYPE &exponent){
+template <class FLOAT, class EXPTYPE> FLOAT fx_pow(const FLOAT &x, const EXPTYPE &exponent){
     assert((ERROR_MESSAGE, !std::is_floating_point_v<FLOAT>));
     BACKEND_FLOAT val = pow( (BACKEND_FLOAT) x, (BACKEND_FLOAT) exponent);
     return fx_rounding(&x, val);
@@ -224,7 +224,7 @@ template <class FLOAT> FLOAT fx_cbrt(const FLOAT &x){
 }
 
 
-template <class FLOAT1, class FLOAT2> FLOAT1 fx_hypot(const FLOAT1 &x, FLOAT2 &y){
+template <class FLOAT1, class FLOAT2> FLOAT1 fx_hypot(const FLOAT1 &x, const FLOAT2 &y){
     assert((ERROR_MESSAGE, !std::is_floating_point_v<FLOAT1>));
     BACKEND_FLOAT val = hypot( (BACKEND_FLOAT) x, (BACKEND_FLOAT) y);
     return fx_rounding(&x, val);
@@ -345,7 +345,7 @@ template <class FLOAT1, class FLOAT2> FLOAT1 fx_remainder(const FLOAT1 &x, const
 }
 
 
-template <class FLOAT1, class FLOAT2> FLOAT1 fx_remquo(const FLOAT1 &x, const FLOAT2 &y, int* quot){
+template <class FLOAT1, class FLOAT2> FLOAT1 fx_remquo(const FLOAT1 &x, const FLOAT2 &y, const int* quot){
     assert((ERROR_MESSAGE, !std::is_floating_point_v<FLOAT1>));
     BACKEND_FLOAT val = remquo( (BACKEND_FLOAT) x, (BACKEND_FLOAT) y, quot);
     return fx_rounding(&x, val);
