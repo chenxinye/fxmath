@@ -10,8 +10,6 @@
 - Lightweight and easy to use.
 
 
-## Functions
-
 fxmath implements most of the functions in `math.h`/`<cmath>`:
 
 - **Basic Arithmetic**: `fabs`, `fmod`, `remainder`, `ceil`, `floor`, `round`
