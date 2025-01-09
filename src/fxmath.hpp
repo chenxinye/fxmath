@@ -312,6 +312,54 @@ template <class FLOAT1, class FLOAT2, class FLOAT3> FLOAT1 fx_fma(const FLOAT1 &
     BACKEND_FLOAT val = fma( (BACKEND_FLOAT) x, (BACKEND_FLOAT) y, (BACKEND_FLOAT) z);
     return fx_rounding(&x, val);
 }
+
+// Floating-point manipulation functions
+
+template <class FLOAT1, class FLOAT2> FLOAT1 fx_nexttoward(const FLOAT1 &x, const FLOAT2 &y){
+    assert((ERROR_MESSAGE, !std::is_floating_point_v<FLOAT1>));
+    BACKEND_FLOAT val = nexttoward( (BACKEND_FLOAT) x, (BACKEND_FLOAT) y);
+    return fx_rounding(&x, val);
+}
+
+
+template <class FLOAT1, class FLOAT2> FLOAT1 fx_nextafter(const FLOAT1 &x, const FLOAT2 &y){
+    assert((ERROR_MESSAGE, !std::is_floating_point_v<FLOAT1>));
+    BACKEND_FLOAT val = nextafter( (BACKEND_FLOAT) x, (BACKEND_FLOAT) y);
+    return fx_rounding(&x, val);
+}
+
+
+template <class FLOAT1, class FLOAT2> FLOAT1 fx_copysign(const FLOAT1 &x, const FLOAT2 &y){
+    assert((ERROR_MESSAGE, !std::is_floating_point_v<FLOAT1>));
+    BACKEND_FLOAT val = copysign( (BACKEND_FLOAT) x, (BACKEND_FLOAT) y);
+    return fx_rounding(&x, val);
+}
+
+
+//  Remainder 
+
+template <class FLOAT1, class FLOAT2> FLOAT1 fx_remainder(const FLOAT1 &x, const FLOAT2 &y){
+    assert((ERROR_MESSAGE, !std::is_floating_point_v<FLOAT1>));
+    BACKEND_FLOAT val = remainder( (BACKEND_FLOAT) x, (BACKEND_FLOAT) y);
+    return fx_rounding(&x, val);
+}
+
+
+template <class FLOAT1, class FLOAT2> FLOAT1 fx_remquo(const FLOAT1 &x, const FLOAT2 &y, int* quot){
+    assert((ERROR_MESSAGE, !std::is_floating_point_v<FLOAT1>));
+    BACKEND_FLOAT val = remquo( (BACKEND_FLOAT) x, (BACKEND_FLOAT) y, quot);
+    return fx_rounding(&x, val);
+}
+
+
+template <class FLOAT> FLOAT fx_nearbyint(const FLOAT &x){
+    assert((ERROR_MESSAGE, !std::is_floating_point_v<FLOAT>));
+    BACKEND_FLOAT val = nearbyint( (BACKEND_FLOAT) x );
+    return fx_rounding(&x, val);
+}
+
+// misc
+
 } // end namespace
 
 
