@@ -25,8 +25,6 @@ All function instructions follows [math functions](https://en.cppreference.com/w
 
 ## Getting Started
 
-### Prerequisites
-
 - **FloatX**: fxmath relies on the FloatX library to define and handle custom low-precision floating-point types. You can find and install FloatX from its [GitHub repository](https://github.com/oprecomp/FloatX).
 
 ### Installation
