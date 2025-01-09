@@ -53,19 +53,13 @@ Or include it directly in your codebase by adding the relevant files.
    #include "fxmath.hpp"
    ```
 
-2. **Set up FloatX types**:
+2. **Set up FloatX types and Perform mathematical operations**:
    Define custom low-precision floating-point types using FloatX.
    ```cpp
    #include <floatx.hpp>
 
    using fx8 = flx::floatx<8, 23>; // Define a FloatX type (8-bit exponent, 23-bit mantissa)
-   ```
-
-3. **Perform mathematical operations**:
-   Use fxmath functions with FloatX-defined types.
    ```cpp
-   #include <floatx.hpp>
-
    fx8 a = 3.14;
    fx8 b = fxmath::fx_sin(a);
    ```
