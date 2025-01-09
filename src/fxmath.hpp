@@ -360,6 +360,14 @@ template <class FLOAT> FLOAT fx_nearbyint(const FLOAT &x){
 
 // misc
 
+
+template <class FLOAT> bool fx_isnormal(const FLOAT &x){
+    assert((ERROR_MESSAGE, !std::is_floating_point_v<FLOAT>));
+    bool val = std::isnormal( (BACKEND_FLOAT) x );
+    return val;
+}
+
+
 } // end namespace
 
 
