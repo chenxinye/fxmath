@@ -50,7 +50,7 @@ Or include it directly in your codebase by adding the relevant files.
 
 1. **Include fxmath in your project**:
    ```cpp
-   #include "fxmath.hpp"
+   #include <fxmath.hpp>
    ```
 
 2. **Set up FloatX types and Perform mathematical operations**:
