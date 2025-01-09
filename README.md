@@ -64,11 +64,7 @@ Or include it directly in your codebase by adding the relevant files.
    fx8 b = fxmath::fx_sin(a);
    ```
 
-More examples can be viewed at inside the folder ''examples''.
-
-## Contributions
-
-Contributions are welcome! If you would like to contribute to the project (encounter bugs, submit feature requests), feel free to open an issue or submit a pull request.
+More examples can be viewed at inside the folder [''examples''](https://github.com/oprecomp/FloatX).
 
 ## License
 
