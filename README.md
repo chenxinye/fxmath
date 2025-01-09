@@ -70,23 +70,7 @@ Or include it directly in your codebase by adding the relevant files.
    fx8 b = fxmath::fx_sin(a);
    ```
 
-### Example
-
-Here’s a complete example:
-```cpp
-#include <floatx.hpp>
-#include <fxmath.hpp>
-
-using fx16 = flx::floatx<8, 7>; // Define a low-precision float type
-
-int main() {
-    fx16 x = 0.5;
-    fx16 result = fxmath::fx_exp(x); // Compute e^x in simulated low precision
-
-    std::cout << "exp(" << x << ") = " << result << std::endl;
-    return 0;
-}
-```
+More examples can be viewed at inside the folder ''examples''.
 
 ## Contributions
 
