@@ -64,11 +64,7 @@ Or include it directly in your codebase by adding the relevant files.
 
 More examples can be viewed at inside the folder [''examples''](https://github.com/oprecomp/FloatX).
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## Acknowledgments
 
-- The [FloatX](https://github.com/oprecomp/FloatX) library for enabling customizable low-precision floating-point arithmetic.
-- The broader numerical computing and open-source community for inspiration and tools.
+- The repo is supported by [FloatX](https://github.com/oprecomp/FloatX) library for enabling customizable low-precision floating-point arithmetic.
+
